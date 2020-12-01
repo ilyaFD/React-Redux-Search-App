@@ -15,8 +15,8 @@ const SearchField = () => {
   const filtredArtists = hasItems ? artists.filter(artist => artist.strTeam.toLowerCase().indexOf(searchVal.toLowerCase()) === 0) : [];
   const hasFiltredItems = filtredArtists != null && filtredArtists.length > 0 && searchVal;
   const postfix = hasFiltredItems ? filtredArtists[0].strTeam.slice(searchVal.length) : '';
-  const postfixHasSpace = postfix.substr(0, 1) == ' ';
-  const searchValHasSpace = searchVal.substr(searchVal.length - 1, searchVal.length) == ' ';
+  const postfixHasSpace = postfix.substr(0, 1) === ' ';
+  const searchValHasSpace = searchVal.substr(searchVal.length - 1, searchVal.length) === ' ';
 
   const searchHendler = e => {
     dispatch(setSearchVal(e.target.value));

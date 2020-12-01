@@ -35,7 +35,7 @@ function* fetchSearchRequest(action) {
         ]);
         const state = yield select();
         const newSearchVal = state.search.searchVal;
-        runSearchValWatch = !(searchVal == newSearchVal);
+        runSearchValWatch = !(searchVal === newSearchVal);
         searchVal = newSearchVal;
       }
       yield put({type: type.GET_ARTISTS_SUCCES, artists: artists[0].teams});
