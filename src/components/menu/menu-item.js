@@ -1,12 +1,8 @@
 import React from 'react';
 import * as S from './menu.styled';
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const ArtistsItem = ({ name, iconSrc, slug }) => {
-  const currentlocation = useLocation().pathname;
-  const itemlocation = '/' + slug;
-  const isActive = currentlocation === itemlocation;
-  
+const ArtistsItem = ({ name, iconSrc, slug }) => {  
   return (
     <S.MenuItem>
       <Link to={ slug }>
